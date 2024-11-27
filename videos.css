@@ -1,0 +1,19 @@
+img {height: 100px;}
+
+button {background: greenyellow;}
+
+
+
+button {
+  background-color: greenyellow; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  border: none; /* Sin bordes */
+  border-radius: 15px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  transition: background-color 0.3s ease; /* Animación suave */
+}
+
+button:hover {
+  background-color: #92BC00;}

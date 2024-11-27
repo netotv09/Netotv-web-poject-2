@@ -1,0 +1,131 @@
+
+<a href="vodeos .html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  close
+</a>
+
+<title>video 3 / netotv.com</title>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="video" src="YouCut_20241021_150329750.mp4"></video>
+        <div class="controls">
+            <button id="play-pause" class="control-button material-icons">play_arrow</button>
+            <input type="range" id="progress" class="progress-bar" value="0" min="0" max="100">
+            <button id="mute-unmute" class="control-button material-icons">volume_up</button>
+            <button id="fullscreen" class="control-button material-icons">fullscreen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+
+</html>
+
+<style>body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: url('background.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+
+.video-container {
+position: relative;
+max-width: 800px;
+margin: 50px auto;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.controls {
+display: flex;
+align-items: center;
+background: #8bc34a;
+padding: 10px;
+}
+
+.control-button {
+background: none;
+border: none;
+font-size: 24px;
+color: white;
+cursor: pointer;
+margin: 0 10px;
+}
+
+.progress-bar {
+flex: 1;
+appearance: none;
+height: 8px;
+border-radius: 5px;
+background: white;
+cursor: pointer;
+}</style>
+
+<script>const video = document.getElementById('video');
+const playPauseBtn = document.getElementById('play-pause');
+const progressBar = document.getElementById('progress');
+const muteUnmuteBtn = document.getElementById('mute-unmute');
+const fullscreenBtn = document.getElementById('fullscreen');
+
+// Play/Pause functionality
+playPauseBtn.addEventListener('click', () => {
+if (video.paused) {
+video.play();
+playPauseBtn.textContent = 'pause';
+} else {
+video.pause();
+playPauseBtn.textContent = 'play_arrow';
+}
+});
+
+// Progress bar functionality
+video.addEventListener('timeupdate', () => {
+const progress = (video.currentTime / video.duration) * 100;
+progressBar.value = progress;
+});
+
+progressBar.addEventListener('input', () => {
+video.currentTime = (progressBar.value / 100) * video.duration;
+});
+
+// Mute/Unmute functionality
+muteUnmuteBtn.addEventListener('click', () => {
+video.muted = !video.muted;
+muteUnmuteBtn.textContent = video.muted ? 'volume_off' : 'volume_up';
+});
+
+// Fullscreen functionality
+fullscreenBtn.addEventListener('click', () => {
+if (video.requestFullscreen) {
+video.requestFullscreen();
+} else if (video.webkitRequestFullscreen) {
+video.webkitRequestFullscreen();
+} else if (video.msRequestFullscreen) {
+video.msRequestFullscreen();
+}
+});</script>
+</body>
+
+</html>
+
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" /> 

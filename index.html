@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>netotv.com</title>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Barra de menú (vacía para agregar código) */
+    .navbar {
+      background-color: greenyellow;
+      height: 60px; /* Puedes ajustar la altura según lo necesites */
+      width: 100%;
+      /* Espacio vacío para insertar contenido en la barra */
+    }
+
+    /* Contenedor de los cuadros */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Estilos de los cuadros */
+    .card {
+      width: 300px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: greenyellow;
+      margin: 0;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: greenyellow;
+      margin: 10px 0 20px;
+    }
+
+    .card-button {
+      display: inline-block;
+      background: greenyellow;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .card-button:hover {
+      background: #a9d400;
+    }
+  </style>
+</head>
+<body>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra Adaptable</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Íconos de Google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+   body {background: gray;}
+   
+    /* Estilo de la barra de navegación */
+    .nav-wrapper {
+      background-color: white !important;
+    }
+    .nav-wrapper .material-icons {
+      color: greenyellow !important;
+    }
+    .brand-logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    /* Estilo del modal */
+    .modal {
+      max-width: 400px;
+      border-radius: 10px;
+      background-color: greenyellow;
+    }
+    .modal-content h5 {
+      color: black !important;
+    }
+    .modal-content ul li a {
+      color: black !important; /* Los nombres de las páginas en color negro */
+      font-weight: bold;
+    }
+    .modal-content ul li a:hover {
+      text-decoration: underline;
+    }
+    .search-input {
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: white;
+      color: black !important; /* Texto que el usuario escribe en negro */
+      border: 1px solid black;
+    }
+    .btn-flat {
+      color: black !important;
+    }
+    .modal-footer button, .modal-footer a {
+      color: black !important;
+    }
+    .btn {
+      background-color: black;
+      color: greenyellow !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">
+        <img src="20241121_221028.png" alt="Logo">
+        
+      </a>
+      <ul class="right">
+        <li><a href="#modal1" class="modal-trigger"><i class="material-icons">menu</i></a></li>
+        <li><a href="#modal2" class="modal-trigger"><i class="material-icons">search</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Modal de menú -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h5>Páginas</h5>
+      <ul>
+        <li><a href="index.html" target="_blank">inicio</a></li>
+        <li><a href="videos.html" target="_blank">videos</a></li>
+        
+          <li><a href="software.html" target="_blank">software</a></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn-flat">Cerrar</a>
+    </div>
+  </div>
+
+  <!-- Modal de búsqueda -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h5>Buscar [power dy google]</h5>
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="text" name="q" class="search-input" placeholder="buscar algo aqui">
+        <button type="submit" class="btn waves-effect waves-light">⌕Buscar</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close btn-flat">Cerrar</a>
+    </div>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
+    });
+  </script>
+</body>
+</html>
+
+  <!-- Contenedor de los cuadros -->
+  <div class="container">
+    <div class="card">
+      <img src="20241120_201007.jpg" alt="Imagen 1">
+      <div class="card-content">
+        <h2 class="card-title">nueva imagen de diseño para netotv</h2>
+        <p class="card-description"></p>
+       <a href="novedad 1.html" class="card-button">leer mas</a>
+      </div>
+    </div>
+
+    
+
+  
+    </div>
+  </div>
+<footer><p>netotv company©2024 power dy web7 marca intelectual Netotv™®</p></footer>
+</body>
+</html>
+
+<style>
+  
+  footer{background:greenyellow;
+    color:black;
+  }
+  
+  @font-face {
+    font-family: "hind-bold";
+    src: url("hind-bold.otf") format("OpenType");
+  }
+  
+  p {
+    font-family: "hind-bold", sans-serif;}
+    
+    h6 {color: white ;}
+  
+  
+  
+  
+  </style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Redes Sociales</title>
+  <style>
+
+
+    .social-bar {
+      display: flex;
+      gap: 15px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-bar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-bar a img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .social-bar a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .devianart { background-color: #05CC47; }
+    .twitter { background-color: #1DA1F2; }
+    .youtube { background-color: #FF0000; }
+    .reddit { background-color: #FF4500; }
+  </style>
+</head>
+<body>
+  <div class="social-bar">
+    <a href="https://www.deviantart.com/netotv" class="devianart" target="_blank" title="DeviantArt">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/deviantart.svg" alt="DeviantArt">
+    </a>
+    <a href="https://x.com/Netotv23?t=p-pNqtDtz-toR5vPx1ZitA&s=09" class="twitter" target="_blank" title="Twitter/X">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter/X">
+    </a>
+    <a href="https://youtube.com/@netotvntix780?si=G0TSrI9gJ3g3c7mV" class="youtube" target="_blank" title="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+    </a>
+    <a href="https://www.reddit.com/u/NETOTV_inc_220/s/CU3oMXQHN7" class="reddit" target="_blank" title="Reddit">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg" alt="Reddit">
+    </a>
+  </div>
+</body>
+</html>
